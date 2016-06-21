@@ -7,10 +7,17 @@ let articleModule = angular.module('app.article', []);
 import ArticleConfig from './article.config';
 articleModule.config(ArticleConfig);
 
-
 // Controllers
 import ArticleCtrl from './article.controller';
 articleModule.controller('ArticleCtrl', ArticleCtrl);
+
+// Article specific components
+import ArticleActions from './article-actions.component';
+articleModule.component('articleActions', ArticleActions);
+
+import Comment from './comment.component';
+articleModule.component('comment', Comment);
+
 
 
 export default articleModule;
